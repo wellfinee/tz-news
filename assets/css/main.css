@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Actor&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Actor", sans-serif;
+}
+
+body {
+    background-color: #ADADAD;
+    overflow-x: hidden;
+}
+
+style,
+script,
+head {
+    display: none;
+}
+
+.main {
+    width: 80vw;
+    border-radius: 50px 50px 0 0;
+    background-color: #E7E7E6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 10vw;
+}
+
+.main__broadcast {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: start;
+
+}
+
+.main__broadcast>* {
+    margin: 3px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.broadcast__item>a {
+    color: black;
+    text-decoration: none;
+}
+
+.broadcast__item>a:hover {
+    color: #535353;
+    text-decoration: none;
+}
+
+.broadcast__item--active>a {
+    color: #FDC70D !important
+}
+
+.broadcast__item--active>a:hover {
+    color: #ffe173 !important
+}
+
+.main__broadcast>i {
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+
+.main__category>*,
+.main__category {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main__category {
+    width: 100%;
+    margin-top: 5vw;
+    flex-wrap: wrap;
+}
+
+.category__left>a>.main__button,
+.category__right>a>.main__button {
+    margin-right: 10px;
+    width: 108px;
+    height: 44px;
+    font-size: 1.2rem;
+    justify-content: center;
+    border: none;
+    border-radius: 6px;
+    font-weight: 540;
+    text-decoration: none;
+}
+
+.category__right>a>.main__button,
+.main__button-archive {
+    margin-left: 10px;
+    margin-right: 0;
+    width: 61px;
+}
+
+.main__button--active {
+    background-color: #FDC70D
+}
+
+.category__left>a,
+.category__right>a {
+    text-decoration: none;
+    font-family: "Actor", sans-serif;
+    color: black;
+    font-weight: 600;
+}
+
+.main__button-archive {
+    background-color: transparent;
+    width: 176px;
+    height: 44px;
+    border-radius: 22px;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.main__news-container {
+    width: 100%;
+    margin-top: 5vw;
+}
+
+.news-container__title {
+    flex-direction: row;
+    font-size: 3rem;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 2vw;
+}
+
+.news__element {
+    width: 24.8vw;
+    padding: 0.6vw;
+    flex-direction: row;
+    background-color: white;
+    border-radius: 16px;
+    justify-content: space-around;
+    margin: 0.5vw;
+}
+
+.news-container__news--root {
+    flex-direction: row;
+    width: calc(100% + 2vw);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.element__image {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 16px;
+    overflow: hidden;
+
+}
+
+.element__image>img {
+    height: 100%;
+}
+
+.element__text {
+    width: 14vw;
+    align-items: start;
+    justify-content: space-between;
+    height: 9vw
+}
+
+.element__title {
+    font-size: 1rem;
+}
+
+.element__text>button {
+    background-color: #FDC70D;
+    padding: 7px 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+.main__button:hover {
+    background-color: #ffe173;
+}
+
+.main__button-archive:hover {
+    color: #757575;
+    border-color: #959595;
+}
+
+.news-container__pagination {
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.pagination__center {
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 10px;
+}
+.pagination__left, .pagination__number, .pagination__right {
+    width: 40px;
+    height: 44px;
+    background-color: white;
+    justify-content: center;   
+    border-radius: 6px; 
+    margin: 3px;
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
+.pagination__number--active{
+    background-color: #FDC70D;
+}
+.pagination__left:hover, .pagination__number:hover, .pagination__right:hover {
+    background-color: #ffe173;
+    color:black 
+}
+.main-registration__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 96%;
+    margin: 85px auto 3vw auto; /* Центрирование */
+    padding: 2%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: start;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.main-registration__form input,
+.main-registration__form textarea {
+    width: 96%;
+    padding: 2%;
+    border: 1px solid #E7E7E6;
+    background-color: #E7E7E6;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.main-registration__form > button {
+    width: 300px;
+    padding: 20px 25px;
+    border: none;
+    border-radius: 100px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 2vw;
+    background-color: #FFC600;
+}
+.main-registration__form input:focus,
+.main-registration__form textarea:focus {
+    border-color: #ffa500;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.5);
+}
+.form__checkbox-container > label{
+    flex-direction: row;
+    gap: 7px;
+    font-size: 0.8rem;
+}
+.form__checkbox-container > label > a{
+    color: black
+}
+.file-input input {
+    border: none;
+    padding: 5px;
+}
+.checkbox-container {
+    display: inline-flex;
+    align-items: center;
+}
+
+.form__checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.form__checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #FFC600;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form__checkbox-container input[type="checkbox"]:checked {
+    background-color: #FFC600;
+}
+
+.form__checkbox-container input[type="checkbox"]:checked::after {
+    content: '\2713';
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background-color: #FFC600;
+    color: white;
+    font-size: 14px;
+    height: 100%;
+    border-radius: 1px;
+}
+
+.form__checkbox-container label {
+    margin-left: 0.5rem;
+    font-size: 0.9rem;
+}
+
+
+.form__checkbox-container label a:hover {
+    text-decoration: underline;
+}
+
+
+.form__checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+}
+.form__checkbox-container  > input{
+    width: auto;
+}
+.submit-btn {
+    background-color: #ffa500;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #e69500;
+}
+
+.success-message {
+    text-align: center;
+    color: green;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+.upload-button {
+    align-items: center;
+    background-color: #FFC600; /* Жёлтый цвет */
+    color: black; /* Цвет текста */
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .upload-button:hover {
+    background-color: #facf32; /* Более светлый жёлтый для ховера */
+  }
+
+  .upload-button i {
+    margin-left: 10px;
+
+    font-size: 1.5rem;
+
+  }
+
+  .main__broadcast-gov{
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: start;
+}
+.main__broadcast-gov > *{
+    margin: 3px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+.main__broadcast-gov > i{
+    margin-top: 5px;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+
+
+/* Адаптивность */
+
+
+@media screen and (max-width: 1300px) {
+    .element__text>button{
+        padding: 8px 10px;
+    }
+    .element__title{
+        font-size: 1.2rem;
+    }   
+    .news__element{
+        width: 36vw;
+        justify-content: space-between;
+        padding: 1.8vw;
+    }
+    .element__image{
+        width: 14vw;
+        height:14vw;
+    }
+    .element__text{
+        height: 14vw;
+        width: 21vw;
+        font-size: 1.5rem;
+    }
+} 
+@media screen and (max-width: 1050px) {
+    .category__right > a > .main__button--active{
+        margin-left: 0;
+    }
+    .category__right{
+        margin-top: 10px ;
+    }
+    .element__text>button{
+        padding: 6px 8px;
+    }
+    .element__title{
+        font-size: 1rem;
+    }   
+    .news__element{
+        width: 36vw;
+        justify-content: space-between;
+        padding: 1.8vw;
+    }
+    .element__image{
+        width: 14vw;
+        height:14vw;
+    }
+    .element__text{
+        height: 14vw;
+        width: 21vw;
+        font-size: 1rem;
+    }
+    .upload-button{
+        font-size: 0.9rem;
+    }
+    .upload-button i{
+        font-size: 1.3rem;
+    }
+    .main-registration__form > button{
+        width: 150px;
+        padding: 15px 20px;
+    }
+    .form__checkbox-container > label {
+        font-size: 0.8rem;
+    }
+}
+@media screen and (max-width: 840px) {
+    .element__text>button{
+        padding: 4px 7px;
+    }
+    .element__title{
+        font-size: 0.9rem;
+    }   
+    .news__element{
+        width: 36vw;
+        justify-content: space-between;
+        padding: 1.8vw;
+    }
+    .element__image{
+        width: 14vw;
+        height:14vw;
+    }
+    .element__text{
+        height: 14vw;
+        width: 21vw;
+        font-size: 0.8rem;
+    }
+} 
+
+@media screen and (max-width: 768px) {
+    .element__text>button{
+        padding: 8px 10px;
+    }
+    .element__title{
+        font-size: 1.4rem;
+    }   
+    .news__element{
+        width: 76.2vw;
+        justify-content: space-between;
+        padding: 1.8vw;
+        margin: 1vw 0;
+    }
+    .element__image{
+        width: 28vw;
+        height:28vw;
+    }
+    .element__text{
+        height: 28vw;
+        width: 47vw;
+        font-size: 0.8rem;
+    }
+    .form__checkbox-container > label {
+        font-size: 0.7rem;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+        margin-left: 0.3rem;
+        gap: 2px
+    }
+    .form__checkbox-container input[type="checkbox"]{
+        width: 15px;
+        height: 15px;
+
+    }
+    .form__checkbox-container input[type="checkbox"]:checked::after {
+        font-size: 10px;
+    }
+    .form__checkbox-container {
+        gap: 0px
+    }
+
+    .main__broadcast-gov > *{
+        font-size: 1.5rem;
+    }
+    .main__broadcast-gov > i{
+        font-size: 1.1rem;
+    }
+}
+    
+@media screen and (max-width: 560px) {
+    .category__right{
+        flex-wrap: wrap;
+        justify-content: start;
+
+    }
+    .main__button-archive{
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .element__title{
+        font-size: 1rem;
+    }   
+    .element__text{
+        height: 28vw;
+        width: 47vw;
+        font-size: 0.8rem;
+    }
+
+    .main__broadcast-gov > *{
+        font-size: 1.2rem;
+    }
+    .main__broadcast-gov > i{
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 500px) {
+    .main-registration__form {
+        width: 110%;
+        margin-left: -7%;
+    }
+    .form-title {
+        font-size: 1.5rem;
+    }
+    .main__broadcast-gov{
+        width: 110%;
+    }
+    .main-registration__form{
+        margin-top: 45px;
+    }
+    .main{
+        padding-top: 45px;
+    }
+}
+@media screen and (max-width: 425px) {
+
+    .category__left > a >  .main__button{
+        width: 60px;
+        height: 30px;
+        font-size: 0.8rem;
+    
+    }
+    .category__right > a >  .main__button{
+        width: 40px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    .element__title{
+        font-size: 0.9rem;
+        margin: 10px 0;
+    } 
+    .element__text>button{
+        padding: 4px 6px;
+        margin-bottom: 7px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .news__element{
+        flex-direction: column;
+    }
+    .element__text{
+        order: 2;
+        width: 100%;
+        height: auto    ;
+    }
+    .element__image{
+        order: 1;
+        width: 100%;
+        height: auto;
+    }  
+    .element__image > img{
+        width: 100%;
+        height: auto;
+    }    
+    .pagination__number, .pagination__left, .pagination__right{
+        width: 8vw;
+        height: 8vw;
+        font-size: 0.8rem;
+    }
+    .main__broadcast-gov > *{
+        font-size: 1rem;
+    }
+    .main__broadcast-gov > i{
+        font-size: 0.7rem;
+    }
+
+}
+@media screen and (max-width: 230px) {
+
+    .category__left > a >  .main__button{
+        width: 50px;
+        height: 30px;
+        font-size: 0.7rem;
+    
+    }
+    .category__right > a >  .main__button{
+        width: 30px;
+        height: 20px;
+        font-size: 0.7rem;
+    }
+
+}    

@@ -1,0 +1,31 @@
+<div class="modal__content">
+    <span class="close">&times;</span>
+    <img id="modalImage" class="modal__img" src="" alt="Article Image">
+    <h2 id="modalTitle" class="modal__title"></h2>
+    <p id="modalContent"></p>
+
+    <form id="commentForm" class="comment__form">
+        <h3>Оставить комментарий</h3>
+
+        <label for="name">Имя:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Сообщение:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <label for="attachments">Загрузить изображения:</label>
+        <input type="file" id="attachments" name="attachments" multiple accept="image/*">
+
+        <div class="checkbox__container">
+            <input type="checkbox" id="agree" required>
+            <label for="agree">Согласен с правилами публикации</label>
+        </div>
+
+        <button type="submit">Отправить</button>
+    </form>
+
+    <p id="successMessage" class="success-message" style="display: none;">Комментарий успешно отправлен!</p>
+</div>

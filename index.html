@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="components/header/header.css">
+    <link rel="stylesheet" href="components/modal/modal.css">
+    <link rel="stylesheet" href="components/footer/footer.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div id="header" class="header"></div>
+
+    <div class="main">
+        <div class="main__broadcast">
+            <h1 class="broadcast__item"><a href="#">Главная</a></h1>
+            <i class="fa-solid fa-angles-right"></i>
+            <h1 class="broadcast__item broadcast__item--active"><a href="">Новости</a></h1>
+        </div>
+        <div class="main__category">
+            <div class="category__left">
+                <a href="#"><button class="main__button main__button--active">Новости</button></a>
+                <a href="#"><button class="main__button">Видео</button></a>
+                <a href="#"><button class="main__button">СМИ</button></a>
+            </div>
+            <div class="category__right">
+                <a href="#"><button class="main__button main__button--active">2024</button></a>
+                <a href="#"><button class="main__button">2023</button></a>
+                <a href="#"><button class="main__button">2022</button></a>
+                <a href="#"><button class="main__button">2021</button></a>
+                <a href="#"><button class="main__button-archive">Архив новостей</button></a>
+            </div>
+        </div>
+        <div class="main__news-container">
+            <div class="news-container__title">Новости</div>
+            <div class="modal" id="modal"></div>
+            <div class="news-container__news--root" id="news--root"></div>
+            <div class="news-container__pagination">
+                <a href="#" class="pagination__left"><i class="fa-solid fa-arrow-left"></i></a>
+                <div class="pagination__center">
+                    <a href="#" class="pagination__number pagination__number--active">01</a>
+                    <a href="#" class="pagination__number">02</a>
+                    <a href="#" class="pagination__number">03</a>
+                    <a href="#" class="pagination__number">04</a>
+                    <a href="#" class="pagination__number">05</a>
+                </div>
+                <a href="#" class="pagination__right"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer" class="footer"></div>
+
+    <script type="module" src="/assets/js/openModal.js"></script>
+    <script type="module" src="/assets/js/newsdata.js"></script>
+    <script type="text/javascript" src="/assets/js/headerModal.js"></script>
+    <script type="text/javascript" src="/assets/js/componentFetch.js"></script>
+    <script src="https://kit.fontawesome.com/8f446d19ac.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

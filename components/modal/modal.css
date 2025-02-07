@@ -1,0 +1,195 @@
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 11111;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal__content {
+    background-color: #fefefe;
+    position: relative;
+    margin: 15% auto;
+    padding: 0; /* Remove padding for image */
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 20px; /* Rounded corners */
+    overflow: hidden; /* Prevent overflow from rounded corners */
+    padding-bottom: 2vw;
+}
+.modal__img {
+    width: 100%; /* Full width */
+            height: 400px; /* Fixed height */
+            object-fit: cover; /* Maintain aspect ratio, cover the area */
+            border-top-left-radius: 20px; /* Rounded corners */
+            border-top-right-radius: 20px; 
+}
+.close {
+    color: black;
+    border-radius: 100px;
+    background-color: white;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 8px 20px 12px 20px;
+    align-self: end;
+    margin-right: 10px;
+}
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modal__title {
+    margin: 15px; /* Margin for title */
+}
+.modal__content p {
+    margin: 15px; /* Margin for content */
+}
+#modalContent{
+    width: 80% !important;
+    margin-top: 15px;
+    font-size: 1.2rem;
+}
+#modalTitle{
+    font-size: 2rem;
+    font-weight: bold;
+}
+@media (max-width: 500px) {
+    .modal__content {
+        width: 90%; /* Use more width on smaller screens */
+        margin: 10% auto; /* Adjust margin for smaller screens */
+    }
+    .modal__img {
+        height: 200px; /* Adjust image height for smaller screens */
+    }
+    #modalTitle {
+        font-size: 1.5rem; /* Smaller title font size */
+    }
+    #modalContent {
+        font-size: 1rem; /* Smaller content font size */
+    }
+}
+
+@media (max-width: 250px) {
+    .modal__content {
+        width: 100%; /* Full width for very small screens */
+        margin: 5% auto; /* Adjust margin for very small screens */
+    }
+    .modal__img {
+        height: 150px; /* Further adjust image height */
+    }
+    #modalTitle {
+        font-size: 1.2rem; /* Further reduce title font size */
+    }
+    #modalContent {
+        font-size: 0.9rem; /* Further reduce content font size */
+    }
+}
+.comment__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 80%;
+    margin: 20px auto; /* Центрирование */
+    padding: 2%;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    align-items: start;
+}
+
+.form-title {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.comment__form input,
+.comment__form textarea {
+    width: 96%;
+    padding: 2%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease-in-out;
+}
+.comment__form > button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #FDC70D;
+    color: white;
+}
+.comment__form input:focus,
+.comment__form textarea:focus {
+    border-color: #ffa500;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 165, 0, 0.5);
+}
+
+.file-input input {
+    border: none;
+    padding: 5px;
+}
+
+.checkbox__container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+}
+.checkbox__container > input{
+    width: auto;
+}
+.submit-btn {
+    background-color: #ffa500;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-btn:hover {
+    background-color: #e69500;
+}
+
+.success-message {
+    text-align: center;
+    color: green;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Адаптивность */
+@media (max-width: 500px) {
+    .comment__form {
+        width: 90%;
+    }
+    .form-title {
+        font-size: 1.5rem;
+    }
+}

@@ -7,17 +7,19 @@
     <form id="commentForm" class="comment__form">
         <h3>Оставить комментарий</h3>
 
-        <label for="name">Имя:</label>
-        <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
+        <input type="text" id="name" name="name" placeholder="Имя" required>
 
-        <label for="message">Сообщение:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
+        <input type="email" id="email" name="email"  placeholder="E-mail" required>
 
-        <label for="attachments">Загрузить изображения:</label>
-        <input type="file" id="attachments" name="attachments" multiple accept="image/*">
+        <textarea id="message" name="message" rows="4" placeholder="коментарии" required></textarea>
+
+
+        <label for="file-upload" class="upload-button">
+                Прикрепить файлы
+                <i class="fa-solid fa-paperclip"></i>
+            </label>
+            <input type="file" id="file-upload" multiple accept="image/* style="display: none;">
 
         <div class="checkbox__container">
             <input type="checkbox" id="agree" required>
